@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.universityAPI.universityAPI.entities.University;
-import com.universityAPI.universityAPI.repositories.UniversityRepository;
+import com.universityAPI.universityAPI.repositories.IUniversityRepository;
+
 
 @Service
 public class UniversityService implements IUniversityService{
 
 	@Autowired
-	private UniversityRepository universityRepository;
+	private IUniversityRepository universityRepository;
 	
 	@Override
 	public List<University> getUniversities() {
