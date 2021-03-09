@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.universityAPI.universityAPI.entities.University;
 import com.universityAPI.universityAPI.services.IUniversityService;
 
+import aj.org.objectweb.asm.Type;
+
 import java.util.List;
 
 @RestController
@@ -30,14 +32,9 @@ public class UniversityController {
 	}
 	
 	//Get university by Id
-	@GetMapping("/universities/{universityId}")
-	public ResponseEntity<HttpStatus> getUniversity(@PathVariable String universityId) {
-		try {
-			this.universityService.getUniversity(Long.parseLong(universityId));
-			return new ResponseEntity<HttpStatus>(HttpStatus.OK);
-		} catch (Exception e) {
-			return new ResponseEntity<HttpStatus>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+	@GetMapping("/university/{universityId}")
+	public University getUniversity(@PathVariable String universityId) {
+		return universityService.getUniversity(Long.parseLong(universityId));
 	}
 	
 	//Add a new University

@@ -22,7 +22,7 @@ public class UniversityService implements IUniversityService{
 
 	@Override
 	public University getUniversity(long universityId) {
-		return universityRepository.getOne(universityId);
+		return universityRepository.findById(universityId).get();
 	}
 
 	@Override
