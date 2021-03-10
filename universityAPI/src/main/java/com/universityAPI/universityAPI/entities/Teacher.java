@@ -1,9 +1,14 @@
 package com.universityAPI.universityAPI.entities;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 @Entity
 @Table(name = "teacher_tbl")
@@ -16,12 +21,16 @@ public class Teacher {
 	
 	@ManyToOne
 	private Department department;
+	
+//	@OneToOne
+//	private Course course;
 
 	public Teacher() {
 		super();
 	}
 
-	public Teacher(long id, String firstName, String lastName, String designation, Department department) {
+	public Teacher(long id, String firstName, String lastName, 
+			String designation, Department department) {
 		super();
 		Id = id;
 		this.firstName = firstName;
