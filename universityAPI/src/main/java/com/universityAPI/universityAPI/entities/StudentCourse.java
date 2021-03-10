@@ -28,7 +28,7 @@ public class StudentCourse {
 	}
 
 	public long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(long id) {
@@ -36,7 +36,7 @@ public class StudentCourse {
 	}
 
 	public Student getStudentId() {
-		return studentId;
+		return this.studentId;
 	}
 
 	public void setStudentId(Student studentId) {
@@ -44,7 +44,7 @@ public class StudentCourse {
 	}
 
 	public Course getCourseId() {
-		return courseId;
+		return this.courseId;
 	}
 
 	public void setCourseId(Course courseId) {

@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Table(name="student_tbl")
 public class Student {
 	@Id
-	private long Id;
+	private long id;
 	private String firstName;
 	private String lastName;
 	private int semester;
@@ -21,7 +21,7 @@ public class Student {
 
 	public Student(long id, String firstName, String lastName, int semester, Department department) {
 		super();
-		Id = id;
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.semester = semester;
@@ -33,15 +33,15 @@ public class Student {
 	}
 	
 	public long getId() {
-		return Id;
+		return this.id;
 	}
 
 	public void setId(long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 
 	public void setFirstName(String firstName) {
@@ -49,7 +49,7 @@ public class Student {
 	}
 
 	public String getLastName() {
-		return lastName;
+		return this.lastName;
 	}
 
 	public void setLastName(String lastName) {
@@ -57,7 +57,7 @@ public class Student {
 	}
 
 	public int getSemester() {
-		return semester;
+		return this.semester;
 	}
 
 	public void setSemester(int semester) {
@@ -65,7 +65,7 @@ public class Student {
 	}
 
 	public Department getDepartment() {
-		return department;
+		return this.department;
 	}
 
 	public void setDepartment(Department department) {
@@ -74,7 +74,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [Id=" + Id + ", firstName=" + firstName + ", lastName=" + lastName + ", semester=" + semester
-				+ ", department=" + department + "]";
+		return "Student [Id=" + this.id + ", firstName=" + this.firstName + ", lastName=" + this.lastName + ", semester=" + this.semester
+				+ ", department=" + this.department + "]";
 	}
 }

@@ -12,8 +12,8 @@ import javax.persistence.OneToMany;
 public class Department {
 	
 	@Id
-	private long Id;
-	private String Name;
+	private long id;
+	private String name;
 	
 	@OneToMany(mappedBy = "department")
 	private List<Teacher> teachers;
@@ -27,30 +27,30 @@ public class Department {
 
 	public Department(long id, String name, List<Teacher> teachers, List<Student> students) {
 		super();
-		Id = id;
-		Name = name;
+		this.id = id;
+		this.name = name;
 		this.teachers = teachers;
 		this.students = students;
 	}
 
 	public long getId() {
-		return Id;
+		return this.id;
 	}
 
 	public void setId(long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
-		return Name;
+		return this.name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		return "Department [Id=" + Id + ", Name=" + Name + ", teachers=" + teachers + "]";
+		return "Department [Id=" + this.id + ", Name=" + this.name + ", teachers=" + teachers + "]";
 	}	
 }

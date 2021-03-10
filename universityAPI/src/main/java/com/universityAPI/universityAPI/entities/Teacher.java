@@ -1,23 +1,19 @@
 package com.universityAPI.universityAPI.entities;
 
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 @Table(name = "teacher_tbl")
 public class Teacher {
 	@Id
-	private long Id;
+	private long id;
 	private String firstName;
 	private String lastName;
-	private String Designation;
+	private String designation;
 	
 	@ManyToOne
 	private Department department;
@@ -32,19 +28,19 @@ public class Teacher {
 	public Teacher(long id, String firstName, String lastName, 
 			String designation, Department department) {
 		super();
-		Id = id;
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		Designation = designation;
+		this.designation = designation;
 		this.department = department;
 	}
 
 	public long getId() {
-		return Id;
+		return this.id;
 	}
 
 	public void setId(long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -64,11 +60,11 @@ public class Teacher {
 	}
 
 	public String getDesignation() {
-		return Designation;
+		return designation;
 	}
 
 	public void setDesignation(String designation) {
-		Designation = designation;
+		this.designation = designation;
 	}
 
 	public Department getDepartment() {
@@ -81,7 +77,7 @@ public class Teacher {
 
 	@Override
 	public String toString() {
-		return "Teacher [Id=" + Id + ", firstName=" + firstName + ", lastName=" + lastName + ", Designation="
-				+ Designation + ", department=" + department + "]";
+		return "Teacher [Id=" + this.id + ", firstName=" + this.firstName + ", lastName=" + this.lastName + ", Designation="
+				+ this.designation + ", department=" + this.department + "]";
 	}
 }

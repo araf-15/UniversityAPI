@@ -26,7 +26,7 @@ public class University {
 	}
 
 	public long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(long id) {
@@ -34,7 +34,7 @@ public class University {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -42,7 +42,7 @@ public class University {
 	}
 
 	public String getAddress() {
-		return address;
+		return this.address;
 	}
 
 	public void setAddress(String address) {
@@ -50,7 +50,7 @@ public class University {
 	}
 
 	public String getVc_name() {
-		return vc_name;
+		return this.vc_name;
 	}
 
 	public void setVc_name(String vc_name) {
@@ -59,6 +59,6 @@ public class University {
 
 	@Override
 	public String toString() {
-		return "University [id=" + id + ", name=" + name + ", address=" + address + ", vc_name=" + vc_name + "]";
+		return "University [id=" + this.id + ", name=" + this.name + ", address=" + this.address + ", this.vc_name=" + vc_name + "]";
 	}
 }

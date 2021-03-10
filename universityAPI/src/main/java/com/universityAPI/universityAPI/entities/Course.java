@@ -32,7 +32,7 @@ public class Course {
 	}
 
 	public long getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(long id) {
@@ -40,7 +40,7 @@ public class Course {
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	public void setName(String name) {
@@ -48,7 +48,7 @@ public class Course {
 	}
 
 	public String getCode() {
-		return code;
+		return this.code;
 	}
 
 	public void setCode(String code) {
@@ -56,7 +56,7 @@ public class Course {
 	}
 
 	public Teacher getCourseTeacher() {
-		return courseTeacher;
+		return this.courseTeacher;
 	}
 
 	public void setCourseTeacher(Teacher courseTeacher) {
