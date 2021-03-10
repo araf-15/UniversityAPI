@@ -17,16 +17,20 @@ public class Department {
 	
 	@OneToMany(mappedBy = "department")
 	private List<Teacher> teachers;
+	
+	@OneToMany(mappedBy = "department")
+	private List<Student> students;
 
 	public Department() {
 		super();
 	}
 
-	public Department(long id, String name, List<Teacher> teachers) {
+	public Department(long id, String name, List<Teacher> teachers, List<Student> students) {
 		super();
 		Id = id;
 		Name = name;
 		this.teachers = teachers;
+		this.students = students;
 	}
 
 	public long getId() {
