@@ -1,7 +1,5 @@
 package com.universityAPI.universityAPI.controllers;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,12 +22,10 @@ public class UniversityController {
 	@Autowired
 	private IUniversityService universityService;
 	
-	private Logger logger = LoggerFactory.getLogger(UniversityController.class);
 	
 	//Get All universities
 	@GetMapping("/universities")
 	public List<University> getUniversities() {
-		logger.info("Getting all university information");
 		return this.universityService.getUniversities();
 	}
 	
@@ -69,7 +65,9 @@ public class UniversityController {
 			this.universityService.deleteUniversity(Long.parseLong(universityId));
 			return new ResponseEntity<>(HttpStatus.OK);
 		}catch (Exception e) {
+			//e.printStackTrace();
 			return new ResponseEntity<HttpStatus>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+		//this.universityService.deleteUniversity(Long.parseLong(universityId));
 	}
 }
