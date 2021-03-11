@@ -56,7 +56,7 @@ public class StudentCourseController {
 	}
 	
 	//Delete StudentCourse
-	@DeleteMapping("/student/{studentcourseId}")
+	@DeleteMapping("/studentcourse/{studentcourseId}")
 	public ResponseEntity<HttpStatus> deleteDepartment(@PathVariable String studentcourseId){
 		try {
 			this.studentCourseService.deleteStudentCourse(Long.parseLong(studentcourseId));

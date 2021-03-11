@@ -12,15 +12,15 @@ public class StudentCourse {
 	@Id
 	private long id;
 	@OneToOne
-	private Student studentId;
+	private Student student;
 	@OneToOne
-	private Course courseId;
+	private Course course;
 	
 	public StudentCourse(long id, Student studentId, Course courseId) {
 		super();
 		this.id = id;
-		this.studentId = studentId;
-		this.courseId = courseId;
+		this.student = studentId;
+		this.course = courseId;
 	}
 
 	public StudentCourse() {
@@ -35,24 +35,24 @@ public class StudentCourse {
 		this.id = id;
 	}
 
-	public Student getStudentId() {
-		return this.studentId;
+	public Student getStudent() {
+		return this.student;
 	}
 
-	public void setStudentId(Student studentId) {
-		this.studentId = studentId;
+	public void setStudent(Student student) {
+		this.student = student;
 	}
 
-	public Course getCourseId() {
-		return this.courseId;
+	public Course getCourse() {
+		return this.course;
 	}
 
-	public void setCourseId(Course courseId) {
-		this.courseId = courseId;
+	public void setCourse(Course course) {
+		this.course = course;
 	}
 
 	@Override
 	public String toString() {
-		return "StudentCourse [id=" + id + ", studentId=" + studentId + ", courseId=" + courseId + "]";
+		return "StudentCourse [id=" + id + ", studentId=" + this.student + ", courseId=" + this.course + "]";
 	}
 }

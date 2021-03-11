@@ -11,18 +11,18 @@ public class University {
 	private long id;
 	private String name;
 	private String address;
-	private String vc_name;
+	private String vcName;
 	
 	public University() {
 		super();
 	}
 
-	public University(long id, String name, String address, String vc_name) {
+	public University(long id, String name, String address, String vcName) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.address = address;
-		this.vc_name = vc_name;
+		this.vcName = vcName;
 	}
 
 	public long getId() {
@@ -47,18 +47,18 @@ public class University {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}	
+
+	public String getVcName() {
+		return this.vcName;
 	}
 
-	public String getVc_name() {
-		return this.vc_name;
-	}
-
-	public void setVc_name(String vc_name) {
-		this.vc_name = vc_name;
+	public void setVcName(String vcName) {
+		this.vcName = vcName;
 	}
 
 	@Override
 	public String toString() {
-		return "University [id=" + this.id + ", name=" + this.name + ", address=" + this.address + ", this.vc_name=" + vc_name + "]";
+		return "University [id=" + this.id + ", name=" + this.name + ", address=" + this.address + ", VC Name=" + this.vcName + "]";
 	}
 }
